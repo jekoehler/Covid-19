@@ -1,10 +1,18 @@
-#!/usr/bin/python
-"""
+"""Mobility Class
 
+This class allows the user to load a pandas DataFrame object that holds
+feature columns like: Date, Cases, Deceased, Recovered, Stringency, Mobility etc.
+
+This class can be updated with the latest data from two different sources:
+(1) Actual cases from Johns Hopkins University see Readme.md
+(2) Latest stringency index from Oxford University see Readme.md
+
+This class allows the user to plot some features of the data.
 """
 
 import numpy as np
 import pandas as pd
+
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import os
@@ -19,10 +27,43 @@ MOBILITY_CSV_PATH = os.path.join(FILE_PATH, "data/JEK_OxCGRT_v21_latest.csv")
 
 
 class Mobility:
-	
+	"""
+		Attributes
+		----------
+		data : DataFrame
+			DataFrame object (pandas) that holds all feature columns.
+		min_date: str
+			Minimum or starting date of time series
+		max_date: str
+			Maximum or latest date of time series
+		num_date: int
+			Number of dates/days
+			
+		Methods
+		-------
+		load_mobility_data()
+			Load local data stored at subdirectory MOBILITY_CSV_PATH
+		print_info()
+			Print information about the timeseries data
+		update()
+			Update data with the latest data from Hopkins and Oxford
+		save()
+			Save data to local subdirectory MOBILITY_CSV_PATH
+		plot_mobility()
+			Plot cases and mobility data of a single country
+		"""
 	def __init__(self):
-		"""Initialization mobility data that gets prepared and saved
-		from Oxford() class.
+		"""
+		Parameters
+		----------
+		data : DataFrame
+			DataFrame object (pandas) that holds all feature columns.
+		min_date: str
+			Minimum or starting date of time series
+		max_date: str
+			Maximum or latest date of time series
+		num_date: int
+			Number of dates/days
 		"""
 		try:
 			print("Loading mobility data...")
@@ -35,7 +76,7 @@ class Mobility:
 			self.max_date = self.data["Date"].unique().max()
 			self.num_date = self.data["Date"].nunique()
 			
-			print("- shape:", self.data.shape)
+			print("- shape:", self.data.shape
 		except FileNotFoundError as e:
 			print("Error: no data present for file:", os.path.split(MOBILITY_CSV_PATH)[-1])
 			print("Proceed preparing mobility data...")
@@ -115,10 +156,20 @@ class Mobility:
 				print("- latest Mobility data:", md_max_date)
 	
 	def save(self):
+		"""Save data as pandas DataFrame to local subdirectory
+		"""
 		self.data.to_csv(MOBILITY_CSV_PATH, columns=self.data.columns)
 	
 	def plot_mobility(self, ccode, feat="st"):
-		# country
+		"""Plot cases and mobility data of a single country
+		
+		Parameters
+		----------
+		ccode: str
+			Country Code to select country specific data
+		feat: str
+			Feature of mobility data, e.g Stringency (st), Mobility (mt)
+		"""
 		country = self.data[self.data['Country_Code'] == ccode]['CountryName'].unique()[0]
 		
 		feats = ['ConfirmedCases', 'ConfirmedDeaths', 'Recovered', 'Active']
