@@ -9,7 +9,8 @@ Johns Hopkins University [1] and Oxford University [2].
 ### Johns Hopkins University [1]
 
 The JHU data contains novel coronavirus (Covid-19) confirmed infected, deceased and recovered cases.
-JHU Covid-19 data repository can be found on [github](https://github.com/CSSEGISandData/COVID-19)
+The COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
+can be found on [github](https://github.com/CSSEGISandData/COVID-19)
 
 ### Oxford University [2]
 
