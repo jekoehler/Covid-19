@@ -116,7 +116,7 @@ class WorldPopulationData:
 		self.df.loc[self.df.CountryName == 'Caribbean Netherlands', 'Code'] = 'ANT'
 	
 	def save(self):
-		self.df.to_csv(WP_CSV_FILE, columns=self.df.columns)
+		self.df.to_csv(WP_CSV_FILE, columns=self.df.columns, index=False)
 		print("- saved to:", WP_CSV_FILE)
 
 
@@ -127,6 +127,7 @@ def test_world_population_data():
 	missing_count = {col: wp.df[col].isnull().sum() for col in wp.df.columns}
 	missing = pd.DataFrame.from_dict(missing_count, orient='index')
 	print(missing.nlargest(30, 0))
+	print("- columns", wp.df.columns)
 	print("- Country Names", wp.df.CountryName.nunique())
 	print("- Country Codes", wp.df.Code.nunique())
 	print("- Missing 4 codes for countries, but that is okay so far...:)")
