@@ -76,7 +76,7 @@ class Oxford:
 		
 	def save(self):
 		print("- saved: ", OXFORD_CSV_PATH)
-		self.mdf.to_csv(OXFORD_CSV_PATH, columns=self.mdf.columns)
+		self.mdf.to_csv(OXFORD_CSV_PATH, columns=self.mdf.columns, index=False)
 		
 	def print_info(self):
 		print("Oxford DataFrame Info")
