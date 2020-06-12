@@ -18,7 +18,8 @@ import matplotlib.gridspec as gridspec
 import os
 
 from data_utils import COL
-from data_utils import load_oxford_data, extend_data, fill_missing_values, create_features, add_world_population_data
+from data_utils import load_oxford_data, extend_data, fill_missing_values
+from data_utils import create_features, add_world_population_data
 from oxford import Oxford
 from hopkins import Hopkins
 
@@ -64,7 +65,7 @@ class Mobility:
 			self.max_date = self.data["Date"].unique().max()
 			self.num_date = self.data["Date"].nunique()
 			
-			print("- shape:", self.data.shape
+			print("- shape:", self.data.shape)
 		except FileNotFoundError as e:
 			print("Error: no data present for file:", os.path.split(MOBILITY_CSV_PATH)[-1])
 			print("Proceed preparing mobility data...")
