@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/covid/oxford.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/covid/oxford.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,12 +69,20 @@
       <option name="project" value="LOCAL" />
       <updated>1591957744576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Class documentation added">
+      <created>1591962651956</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591962651956</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="imports changed and init method cleaned" />
-    <option name="LAST_COMMIT_MESSAGE" value="imports changed and init method cleaned" />
+    <MESSAGE value="Class documentation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class documentation added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="13" y="-809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591962110847">
@@ -86,9 +93,10 @@
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
     <state x="255" y="-855" key="#oxford/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591962157498" />
-    <state x="239" y="23" key="CommitChangelistDialog2" timestamp="1591957744232">
-      <screen x="0" y="23" width="1280" height="741" />
+    <state x="39" y="-1057" key="CommitChangelistDialog2" timestamp="1591962651786">
+      <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="39" y="-1057" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591962651786" />
     <state x="239" y="23" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@0.23.1280.741" timestamp="1591957744232" />
     <state x="58" y="-832" key="SettingsEditor" timestamp="1591962100797">
       <screen x="-320" y="-1057" width="1920" height="1057" />
