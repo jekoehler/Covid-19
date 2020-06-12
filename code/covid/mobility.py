@@ -53,18 +53,6 @@ class Mobility:
 			Plot cases and mobility data of a single country
 		"""
 	def __init__(self):
-		"""
-		Parameters
-		----------
-		data : DataFrame
-			DataFrame object (pandas) that holds all feature columns.
-		min_date: str
-			Minimum or starting date of time series
-		max_date: str
-			Maximum or latest date of time series
-		num_date: int
-			Number of dates/days
-		"""
 		try:
 			print("Loading mobility data...")
 			self.data = pd.read_csv(MOBILITY_CSV_PATH)
