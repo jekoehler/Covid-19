@@ -1,6 +1,5 @@
-#!/usr/bin/python
-""" Module with util methods that support faster results
-    
+""" Data Utility Module with helping functions used from different
+classes (Oxford and Mobility).
 """
 import pandas as pd
 
@@ -39,7 +38,6 @@ class COL:
 	drc = 'DailyRecovered'
 	dac = 'DailyActive'
 	
-	
 	si = 'StringencyIndex'
 	
 	# stringency features
@@ -49,10 +47,17 @@ class COL:
 
 
 OXFORD_DATA_URL = "https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/OxCGRT_latest.csv"
-#OXFORD_DATA_CSV = "../../data/oxford/OxCGRT_v21_latest.csv"
 
 
-def load_oxford_data():
+def load_oxford_data() -> pd.DataFrame:
+	"""Load Oxford Covid-19 Government Response Tracker (OxCGRT) data
+	from repository, reformat date and rename some columns.
+	
+	Returns
+	-------
+	df: DataFrame
+		Modified data of OxCGRT data
+	"""
 	print("Load latest Oxford data from URL...")
 	try:
 		df = pd.read_csv(OXFORD_DATA_URL)
@@ -78,6 +83,20 @@ def load_oxford_data():
 
 
 def process_data(df, old_df) -> pd.DataFrame:
+	"""Helper Function that performs some processing steps.
+
+	Parameters
+	----------
+	df: DataFrame
+		Data to process and finally returned
+	old_df: DataFrame
+		Initial data without any processing steps applied
+	
+	Returns
+	-------
+	df: DataFrame
+		Processed data
+	"""
 	print("Process data...")
 	df = extend_data(df, old_df)
 	df = fill_missing_values(df)
@@ -94,6 +113,18 @@ def extend_data(df, old_df) -> pd.DataFrame:
 	* extend date to current date for all countries
 	* fill missing values with last known notNaN (Oxford doesn't
 	  completely continues time series, if there are no values)
+	
+	Parameters
+	----------
+	df: DataFrame
+		Data to process and finally returned
+	old_df: DataFrame
+		Initial data without any processing steps applied
+	
+	Returns
+	-------
+	df: DataFrame
+		Extended data
 	"""
 	i = 0
 	for s_col in COL.ci_cols:
@@ -121,8 +152,20 @@ def extend_data(df, old_df) -> pd.DataFrame:
 	return df
 	
 	
-def fill_missing_values(df):
-	# fill missing values with last known one (forward fill)
+def fill_missing_values(df) -> pd.DataFrame:
+	"""Fill missing values with last known one (forward fill) and
+	compute mobility features (mt, Mt, pt, Pt, st, St)
+	
+	Parameters
+	----------
+	df: DataFrame
+		Data to process and finally returned
+	
+	Returns
+	-------
+	df: DataFrame
+		Extended data
+	"""
 	for c_code in df['Country_Code'].unique():
 		for col in COL.si_cols:
 			# it does not fill zeros at the beginning
@@ -152,10 +195,11 @@ def fill_missing_values(df):
 	return df
 
 
-def transform_to_mobility(df, old_df, column, has_flag=True):
+def transform_to_mobility(df, old_df, column, has_flag=True) -> pd.DataFrame:
 	"""Transform the given Oxford Indicator values for S1 to S9
 	to our model that describes the mobility of the population
 	of a country.
+	
 	Parameters:
 	-----------
 	data : DataFrame object
@@ -165,6 +209,7 @@ def transform_to_mobility(df, old_df, column, has_flag=True):
 			Denotes weather a lockdown is general or just in some area
 			Note: S8 doesn't use the regional reach (targeted
 			or general).
+			
 	Returns:
 	--------
 	data : DataFrame object
@@ -208,6 +253,16 @@ def transform_to_mobility(df, old_df, column, has_flag=True):
 
 
 def add_world_population_data(df) -> pd.DataFrame:
+	"""Add information about the population in a country.
+	
+	Parameters
+	----------
+	df: DataFrame
+	
+	Returns
+	-------
+	df: DataFrame
+	"""
 	print("Add World Data...")
 	wp = WorldPopulationData()
 	df = df.merge(wp.df, left_on="Country_Code", right_on="Code", how="left")
@@ -221,6 +276,17 @@ def add_world_population_data(df) -> pd.DataFrame:
 
 
 def create_features(df) -> pd.DataFrame:
+	"""Create additional features like active cases, relative
+	cases (percentage of number of population) and daily cases.
+	
+	Parameters
+	----------
+	df: DataFrame
+
+	Returns
+	-------
+	df: DataFrame
+	"""
 	print("Create Features...")
 	df["Active"] = df.ConfirmedCases - df.ConfirmedDeaths - df.Recovered
 	
