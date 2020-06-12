@@ -57,8 +57,7 @@ class Mobility:
 		try:
 			print("Loading mobility data...")
 			self.data = pd.read_csv(MOBILITY_CSV_PATH)
-			
-			del self.data["Unnamed: 0"]
+			# reformat date
 			self.data["DateTime"] = pd.to_datetime(self.data["Date"], format="%Y-%m-%d", errors="ignore")
 			
 			self.min_date = self.data["Date"].unique().min()
@@ -81,7 +80,6 @@ class Mobility:
 		print("Loading mobility data...")
 		self.data = pd.read_csv(MOBILITY_CSV_PATH)
 		
-		del self.data["Unnamed: 0"]
 		self.data["DateTime"] = pd.to_datetime(self.data["Date"], format="%Y-%m-%d", errors="ignore")
 		
 		self.min_date = self.data["Date"].unique().min()
@@ -147,7 +145,7 @@ class Mobility:
 	def save(self):
 		"""Save data as pandas DataFrame to local subdirectory
 		"""
-		self.data.to_csv(MOBILITY_CSV_PATH, columns=self.data.columns)
+		self.data.to_csv(MOBILITY_CSV_PATH, columns=self.data.columns, index=False)
 	
 	def plot_mobility(self, ccode, feat="st"):
 		"""Plot cases and mobility data of a single country
