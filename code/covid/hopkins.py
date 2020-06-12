@@ -69,7 +69,7 @@ class Hopkins:
 			print("Load Hopkins data...")
 			self.data = pd.read_csv(HOPKINS_CSV_PATH)
 			print("- local data loaded")
-			del self.data["Unnamed: 0"]
+
 			self.data["DateTime"] = pd.to_datetime(self.data["Date"], format="%Y-%m-%d", errors="ignore")
 			self.data = self.data[['Date', 'Country_Code', 'ConfirmedCases', 'ConfirmedDeaths', 'Recovered']]
 			self.min_date = self.data["Date"].unique().min()
@@ -102,7 +102,7 @@ class Hopkins:
 		self.save()
 	
 	def save(self):
-		self.data.to_csv(HOPKINS_CSV_PATH, columns=self.data.columns)
+		self.data.to_csv(HOPKINS_CSV_PATH, columns=self.data.columns, index=False)
 		print("- saved at:", HOPKINS_CSV_PATH)
 
 
