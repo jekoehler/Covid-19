@@ -90,8 +90,7 @@ class Oxford:
 def test_oxford_data():
 	print("Testing Oxford DataFrame:")
 	ox = Oxford()
-	#ox.print_info()
-	#ox.save()
+	ox.print_info()
 	print("Test finished!")
 
 
