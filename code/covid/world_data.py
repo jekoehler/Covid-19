@@ -1,5 +1,3 @@
-#!/opt/anaconda3/envs/tf20/bin/python
-# -*- coding: utf-8 -*-
 """ Module that provides world population data for countries """
 
 import pandas as pd
@@ -8,7 +6,8 @@ import os
 from iso_data import ISOCodes
 
 FILE_PATH = os.path.dirname(os.path.abspath(__file__))
-WP_CSV_FILE = os.path.join(FILE_PATH, "data/World_population_by_country_2020.csv")
+WP_2020_CSV_FILE = os.path.join(FILE_PATH, "data/World_population_by_country_2020.csv")
+WP_CSV_FILE = os.path.join(FILE_PATH, "data/World_population_by_country_latest.csv")
 
 N_DICT = {'BOL': 'Bolivia',
           'VGB': 'British Virgin Islands',
@@ -53,13 +52,34 @@ N_DICT = {'BOL': 'Bolivia',
 
 
 class WorldPopulationData:
-	
+	"""
+	Attributes
+	----------
+	df: DataFrame
+		World population data
+		
+	Methods
+	-------
+	process_word_data()
+		Rename columns, change types and resort values
+	add_iso_codes()
+		Add ISO country codes
+	save()
+		Save data to WP_CSV_FILE
+	"""
 	def __init__(self):
-		self.df = pd.read_csv(WP_CSV_FILE)
-		self.process_world_data()
-		self.add_iso_codes()
+		try:
+			self.df = pd.read_csv(WP_CSV_FILE)
+		except FileNotFoundError as e:
+			self.df = pd.read_csv(WP_2020_CSV_FILE)
+			self.process_world_data()
+			self.add_iso_codes()
+			self.save()
 	
 	def process_world_data(self):
+		"""Rename columns, change types and resort values.
+		"""
+		print("- process world data...")
 		# Select desired columns and rename some of them
 		self.df = self.df[
 			['Country (or dependency)', 'Population (2020)', 'Density (P/Km²)', 'Land Area (Km²)', 'Med. Age', 'Urban Pop %']]
@@ -79,6 +99,9 @@ class WorldPopulationData:
 		self.df = self.df.sort_values(by=['CountryName'], ignore_index=True)
 	
 	def add_iso_codes(self):
+		"""Add country codes ISO 3166-1 Alpha-3.
+		"""
+		print("- add iso data...")
 		iso = ISOCodes()
 		
 		self.df = self.df.merge(iso.codes, left_on="CountryName", right_on="Name", how="left")
@@ -91,9 +114,13 @@ class WorldPopulationData:
 		self.df.Code.fillna(0, inplace=True)
 		self.df.loc[self.df.CountryName == 'Saint Martin', 'Code'] = 'MAF'
 		self.df.loc[self.df.CountryName == 'Caribbean Netherlands', 'Code'] = 'ANT'
+	
+	def save(self):
+		self.df.to_csv(WP_CSV_FILE, columns=self.df.columns)
+		print("- saved to:", WP_CSV_FILE)
 
 
-def my_test():
+def test_world_population_data():
 	print("Testing World Population DataFrame:")
 	wp = WorldPopulationData()
 	# first check if we're missing some values
@@ -107,4 +134,4 @@ def my_test():
 
 
 if __name__ == "__main__":
-	my_test()
+	test_world_population_data()
