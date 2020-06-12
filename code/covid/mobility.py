@@ -71,10 +71,10 @@ class Mobility:
 			ox = Oxford()
 			ox.save()
 			
-			self.data = ox.df
-			self.max_date = ox.max_date
-			self.min_date = ox.min_date
-			self.num_date = ox.num_date
+			self.data = ox.mdf
+			self.min_date = self.data["Date"].unique().min()
+			self.max_date = self.data["Date"].unique().max()
+			self.num_date = self.data["Date"].nunique()
 			
 	def load_mobility_data(self):
 		print("Loading mobility data...")
