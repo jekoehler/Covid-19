@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_Hopkins_v21_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/covid/data/JEK_Hopkins_v21_latest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_OxCGRT_v21_latest.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/mobility.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/covid/mobility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
