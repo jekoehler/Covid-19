@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation" />
+    <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation">
+      <change beforePath="$PROJECT_DIR$/code/covid/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data/ISO_3166-1_alpha-3_CountryCodes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/ISO_3166-1_alpha-3_CountryCodes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_Hopkins_v21_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/JEK_Hopkins_v21_latest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_OxCGRT_v21_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/JEK_OxCGRT_v21_latest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data/World_population_by_country_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/World_population_by_country_2020.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data/World_population_by_country_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/World_population_by_country_latest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/data_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/hopkins.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/hopkins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/iso_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/iso_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/mobility.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/mobility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/oxford.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/oxford.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/covid/world_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/world_data.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
