@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation">
-      <change beforePath="$PROJECT_DIR$/code/covid/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/ISO_3166-1_alpha-3_CountryCodes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/ISO_3166-1_alpha-3_CountryCodes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_Hopkins_v21_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/JEK_Hopkins_v21_latest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/JEK_OxCGRT_v21_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/JEK_OxCGRT_v21_latest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/World_population_by_country_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/World_population_by_country_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data/World_population_by_country_latest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data/World_population_by_country_latest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/data_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/data_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/hopkins.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/hopkins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/iso_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/iso_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/mobility.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/mobility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/oxford.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/oxford.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/covid/world_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid/world_data.py" afterDir="false" />
+    <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/imgs/plot_germany_v1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +28,33 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.mobility">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.mobility (1)">
+    <configuration name="mobility (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Covid-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/opt/anaconda3/envs/tf20/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/covid" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/covid/mobility.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="mobility" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Covid-19" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,6 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mobility (1)" />
         <item itemvalue="Python.mobility" />
         <item itemvalue="Python.world_data" />
         <item itemvalue="Python.oxford" />
@@ -156,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591967946511</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Folder moved up">
+      <created>1592311104923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592311104923</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -167,7 +191,8 @@
     <MESSAGE value="Update test function" />
     <MESSAGE value="Update documentation" />
     <MESSAGE value="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation" />
+    <MESSAGE value="Folder moved up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Folder moved up" />
   </component>
   <component name="WindowStateProjectService">
     <state x="13" y="-809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591962110847">
@@ -178,6 +203,10 @@
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
     <state x="125" y="-914" key="#mobility/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591969873605" />
+    <state x="512" y="-911" key="#mobility_(1)" timestamp="1592311345358">
+      <screen x="-320" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="512" y="-911" key="#mobility_(1)/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311345358" />
     <state x="255" y="-855" key="#oxford" timestamp="1591962157498">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
@@ -186,27 +215,27 @@
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
     <state x="255" y="-855" key="#world_data/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591967644022" />
-    <state x="-192" y="-983" key="CommitChangelistDialog2" timestamp="1591968713838">
+    <state x="-192" y="-983" key="CommitChangelistDialog2" timestamp="1592311104381">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="-192" y="-983" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591968713838" />
+    <state x="-192" y="-983" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311104381" />
     <state x="239" y="23" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@0.23.1280.741" timestamp="1591957744232" />
-    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1591971077828">
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1592311345384">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1259" height="290" key="GridCell.Tab.0.bottom/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591971077828" />
-    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1591971077827">
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311345384" />
+    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1592311345383">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1259" height="290" key="GridCell.Tab.0.center/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591971077827" />
-    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1591971077826">
+    <state width="1259" height="290" key="GridCell.Tab.0.center/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311345383" />
+    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1592311345382">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1259" height="290" key="GridCell.Tab.0.left/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591971077826" />
-    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1591971077828">
+    <state width="1259" height="290" key="GridCell.Tab.0.left/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311345382" />
+    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1592311345383">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1259" height="290" key="GridCell.Tab.0.right/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591971077828" />
+    <state width="1259" height="290" key="GridCell.Tab.0.right/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311345383" />
     <state x="58" y="-832" key="SettingsEditor" timestamp="1591963960904">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
