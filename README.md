@@ -4,7 +4,27 @@ This library provide data about the location, the number of confirmed COVID-19 c
 recoveries and the mobility of the population for all affected countries. The data is received from 
 Johns Hopkins University [1] and Oxford University [2].
 
+## Usage
+
+### Plotting data
+
+```python
+from covid.mobility import Mobility
+
+mob = Mobility()
+mob.plot_mobility('DEU')
+```
+
 <img src="imgs/plot_germany_v1.png" />
+
+### Update data
+
+```python
+from covid.mobility import Mobility
+
+mob = Mobility()
+mob.update()
+```
 
 ## Sources
 
