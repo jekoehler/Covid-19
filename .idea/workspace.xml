@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="855505c9-b20a-4575-8a93-32c77bf469c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imgs/plot_germany_v1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592311104923</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Example image added">
+      <created>1592311800534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592311800534</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -192,7 +198,8 @@
     <MESSAGE value="Update documentation" />
     <MESSAGE value="World population data gets loaded from latest version, if not available it is processed from current version 2020. The processed version is stored as latest version.&#10;&#10;Update documentation" />
     <MESSAGE value="Folder moved up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Folder moved up" />
+    <MESSAGE value="Example image added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Example image added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="13" y="-809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591962110847">
@@ -215,10 +222,10 @@
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
     <state x="255" y="-855" key="#world_data/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1591967644022" />
-    <state x="-192" y="-983" key="CommitChangelistDialog2" timestamp="1592311104381">
+    <state x="-192" y="-983" key="CommitChangelistDialog2" timestamp="1592311800386">
       <screen x="-320" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="-192" y="-983" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311104381" />
+    <state x="-192" y="-983" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@-320.-1057.1920.1057" timestamp="1592311800386" />
     <state x="239" y="23" key="CommitChangelistDialog2/-320.-1057.1920.1057/0.23.1280.741@0.23.1280.741" timestamp="1591957744232" />
     <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1592311345384">
       <screen x="-320" y="-1057" width="1920" height="1057" />
