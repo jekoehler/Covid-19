@@ -10,9 +10,10 @@ Johns Hopkins University [1] and Oxford University [2].
 
 ```python
 from covid.mobility import Mobility
+from covid.data_utils import FEATURE
 
 mob = Mobility()
-mob.plot_mobility('DEU')
+mob.plot_mobility('DEU', feat=FEATURE.mobility)
 ```
 
 <img src="imgs/plot_germany_v1.png" />
