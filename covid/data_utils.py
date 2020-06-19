@@ -46,6 +46,36 @@ class COL:
 	si_cols = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9']
 
 
+class FEATURE:
+	stringency = 'st'
+	stringency_sum = 'St'
+	mobility = 'mt'
+	mobility_sum = 'Mt'
+	public_information = 's1'
+	school_closing = 's2'
+	workplace_closing = 's3'
+	cancel_public_events = 's4'
+	restrictions_on_gatherings = 's5'
+	close_public_transport = 's6'
+	stay_at_home_requirements = 's7'
+	restrictions_on_internal_movement = 's8'
+	international_travel_controls = 's8'
+
+
+FEATURE_DICT = {FEATURE.stringency: 'Stringency (st)',
+                FEATURE.stringency_sum: 'Stringeny, sum (St)',
+                FEATURE.mobility: 'Mobility (mt)',
+                FEATURE.public_information: 'Public Information Campaigns (s1)',
+                FEATURE.school_closing: 'School Closing (s2)',
+                FEATURE.workplace_closing: 'Workplace Closing (s3)',
+                FEATURE.cancel_public_events: 'Cancel Public Events (s4)',
+                FEATURE.restrictions_on_gatherings: 'Restriction on Gatherings (s5)',
+                FEATURE.close_public_transport: 'Close Public Transport (s6)',
+                FEATURE.stay_at_home_requirements: 'Stay At Home Requirements (s7)',
+                FEATURE.restrictions_on_internal_movement: 'Restriction on Internal Movement (s8)',
+                FEATURE.international_travel_controls: 'International Travel Controls (s9)'}
+
+
 OXFORD_DATA_URL = "https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/OxCGRT_latest.csv"
 
 

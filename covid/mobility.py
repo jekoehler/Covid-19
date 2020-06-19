@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import os
 
-from data_utils import COL
+from data_utils import COL, FEATURE, FEATURE_DICT
 from data_utils import load_oxford_data, extend_data, fill_missing_values
 from data_utils import create_features, add_world_population_data
 from oxford import Oxford
@@ -182,7 +182,7 @@ class Mobility:
 		ax1.legend([ax1.get_children()[0], ax1.get_children()[1],
 		            ax1.get_children()[2], ax1.get_children()[3]],
 		           ['Total Confirmed Cases', 'Total Confirmed Deaths',
-		            'Total Recovered', 'Total Active', 'Stringency'],
+		            'Total Recovered', 'Total Active'],
 		           bbox_to_anchor=(0.25, 0.95))
 		
 		plt.xticks(dcc_date.index[::30])
@@ -202,11 +202,11 @@ class Mobility:
 		# plot Mobility with right scale
 		ax2m.set_frame_on(True)
 		ax2m.patch.set_visible(False)
-		ax2m.set_ylabel("Stringency", size=13)
+		ax2m.set_ylabel(FEATURE_DICT[feat], size=13)
 		ax2m.set_ylim([0, 1])
 		ax2m.plot(mt_date, 'ro', markersize=5.0, mfc='red', mec='red')
 		ax2m.legend([ax2.get_children()[0], ax2m.get_lines()[0]],
-		            ['Daily Confirmed Cases', 'Stringency'],
+		            ['Daily Confirmed Cases', FEATURE_DICT[feat]],
 		            bbox_to_anchor=(0.25, 0.95))
 		
 		plt.xticks(dcc_date.index[::30])
@@ -217,7 +217,8 @@ def test_mobility_data():
 	print("Testing Mobility DataFrame:")
 	mobility = Mobility()
 	#mobility.print_info()
-	mobility.plot_mobility("DEU", feat='mt')
+	mobility.plot_mobility("DEU", feat=FEATURE.stringency)
+
 	#mobility.update()
 	print("Test finished!")
 
