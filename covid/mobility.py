@@ -217,7 +217,7 @@ def test_mobility_data():
 	print("Testing Mobility DataFrame:")
 	mobility = Mobility()
 	#mobility.print_info()
-	mobility.plot_mobility("DEU")
+	mobility.plot_mobility("DEU", feat='mt')
 	#mobility.update()
 	print("Test finished!")
 
