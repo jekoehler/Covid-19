@@ -185,10 +185,10 @@ def fill_missing_values(df) -> pd.DataFrame:
 		df.loc[(df.Country_Code == c_code), 'StringencyIndex'] = stringency
 		
 		# compute m(t|L)
-		df.loc[(df.Country_Code == c_code), 'mt'] = df.loc[(df.Country_Code == c_code)][COL.si_cols].sum(axis=1) / 9
-		df.loc[(df.Country_Code == c_code), 'Mt'] = df.loc[(df.Country_Code == c_code)]['mt'].cumsum()
-		df.loc[(df.Country_Code == c_code), 'pt'] = 1 - df.loc[(df.Country_Code == c_code)]['mt']
+		df.loc[(df.Country_Code == c_code), 'pt'] = df.loc[(df.Country_Code == c_code)][COL.si_cols].sum(axis=1) / 9
 		df.loc[(df.Country_Code == c_code), 'Pt'] = df.loc[(df.Country_Code == c_code)]['pt'].cumsum()
+		df.loc[(df.Country_Code == c_code), 'mt'] = 1 - df.loc[(df.Country_Code == c_code)]['pt']
+		df.loc[(df.Country_Code == c_code), 'Mt'] = df.loc[(df.Country_Code == c_code)]['mt'].cumsum()
 		df.loc[(df.Country_Code == c_code), 'st'] = df.loc[(df.Country_Code == c_code)]['StringencyIndex'] / 100
 		df.loc[(df.Country_Code == c_code), 'St'] = df.loc[(df.Country_Code == c_code)]['st'].cumsum()
 		
