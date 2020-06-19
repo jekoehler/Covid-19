@@ -206,7 +206,6 @@ class Mobility:
 		ax2m.set_ylim([0, 1])
 		ax2m.plot(mt_date, 'ro', markersize=5.0, mfc='red', mec='red')
 		ax2box = ax2.get_position()
-		print(ax2box.x0, ax2box.y0, ax2box.width, ax2box.height)
 		ax2m.legend([ax2.get_children()[0], ax2m.get_lines()[0]],
 		            ['Daily Confirmed Cases', FEATURE_DICT[feat]],
 		            bbox_to_anchor=[0, 0, 1, 1])
