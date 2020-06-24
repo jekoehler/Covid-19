@@ -1,8 +1,12 @@
 # Covid-19
 
 This library provide data about the location, the number of confirmed COVID-19 cases, deaths and 
-recoveries and the mobility of the population for all affected countries. The data is received from 
+recoveries and mobility of population for all affected countries. The data is received from two sources,
 Johns Hopkins University [1] and Oxford University [2].
+
+## Mobility
+
+Mobility index (coming soon)
 
 ## Usage
 
